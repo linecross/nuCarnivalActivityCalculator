@@ -1,0 +1,37 @@
+{
+  "activity": {
+    "name": "勇闖新☆世界",
+    "startDate": "2024-01-04T15:00:00",
+    "endDate": "2024-01-25T12:00:00",
+    "score": 43800,
+    "stageExtras": [],
+    "SCORE_UNIT": "情趣用品箱"
+  },
+  "stages": [
+    { "name": "戰鬥-01", "energy": 15, "score": 20 },
+    { "name": "戰鬥-02", "energy": 20, "score": 30 },
+    { "name": "回聲-03", "energy": 25, "score": 40 },
+    { "name": "回聲-04", "energy": 30, "score": 50 },
+    { "name": "回聲-05", "energy": 35, "score": 60 },
+    { "name": "回聲-06", "energy": 40, "score": 70 },
+    { "name": "回聲-07", "energy": 45, "score": 80 },
+    { "name": "回聲-08", "energy": 50, "score": 90 }
+  ],
+  "prizes": [
+    { "score": 1590, "item": "魔力契約", "qty": 2 },
+    { "score": 2850, "item": "晶靈石", "qty": 300 },
+    { "score": 6270, "item": "魔力契約", "qty": 2 },
+    { "score": 8340, "item": "晶靈石", "qty": 350 },
+    { "score": 13800, "item": "魔力契約", "qty": 2 },
+    { "score": 16860, "item": "[背景]魔王城大廳", "qty": 1 },
+    { "score": 17250, "item": "晶靈石", "qty": 400 },
+    { "score": 18870, "item": "[背板]勇闖 新☆世界背板", "qty": 1 },
+    { "score": 20130, "item": "[BGM]BGM047", "qty": 1 },
+    { "score": 26460, "item": "魔力契約", "qty": 3 },
+    { "score": 28980, "item": "魔力契約十卷", "qty": 1 },
+    { "score": 31800, "item": "晶靈石", "qty": 450 },
+    { "score": 34200, "item": "晶花原石", "qty": 1 },
+    { "score": 38400, "item": "閃耀晶核", "qty": 1 },
+    { "score": 43800, "item": "貓貓棒", "qty": 40 }
+  ]
+}

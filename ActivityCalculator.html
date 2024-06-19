@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>新世界狂歡活動計算機</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.33/vue.global.prod.min.js" integrity="sha512-0iutDUhdPATJxtLxUQeakh5i6m0XgfrmLsr+J6ThPkWPDXsjc+55OgmPaRxu0UhgQZ3sWlklQBgDcUZfVhE5iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.4/dexie.min.js" integrity="sha512-z7iX1x5lutE3FkgRZf9RBEtnLc6fV7GHg4K/enunqxr5IqelHqmnxu2BWutBEZMypu766DpWQ7qXFCsGvkMYsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" >
+
+	<link rel='stylesheet' href='./res/css/main.css' />
+</head>
+
+<body>
+	
+	<div id='NuCarnivalActivityApp'>
+		
+			<div class="modal fade" tabindex="-1" id="activityEditor">
+				<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">{{ this.editor.activity.name == null ? '新增' : '編輯' }}活動</h5>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<form class="col form-group needs-validation" >
+								<label for="editorActivityName">活動名稱</label>
+								<input class="form-control" type="text" inputmode="text" id="editorActivityName" v-model="editor.activity.name" required>
+
+								<label for="editorActivityStartDate">開始日期</label>
+								<input class="form-control datetimeInput" type="datetime-local" id="editorActivityStartDate" v-model="editor.activity.startDate" required>
+
+								<label for="editorActivityEndDate">結束日期</label>
+								<input class="form-control datetimeInput" type="datetime-local" id="editorActivityEndDate" v-model="editor.activity.endDate" required>
+
+								<label for="editorActivityScore">活動總分</label>
+								<input class="form-control" type="text" inputmode="numeric" id="editorActivityScore" v-model="editor.activity.score" required>
+
+								<label for="editorActivityStageExtraType">活動加成（固定加成以逗號分隔，例：10,20,30...）</label>
+								<select id="editorActivityStageExtraType" class="form-select form-select-sm" v-model="editor.activity.stageExtraType" required>
+									<option value="NA">無加成</option>
+									<option value="FREE">自由填寫</option>
+									<option value="FIXED">固定加成</option>
+								</select>
+								<input v-if="editor.activity.stageExtraType == 'FIXED'" class="form-control" type="text" inputmode="text" id="editorActivityStageExtraVals" v-model="editor.activity.stageExtraVals" required>
+
+								<hr />
+
+								<div>
+									<table>
+										<tr>
+											<td>關卡名稱</td>
+											<td>體力</td>
+											<td>基礎積分</td>
+											<td></td>
+										</tr>
+										<template v-for="(stage, stageId) in editor.stages" :value="stageId">
+										<tr>
+											<td><input class="form-control" type="text" inputmode="text" v-model="stage.name" required></td>
+											<td><input class="form-control" type="text" inputmode="numeric" v-model="stage.energy" required></td>
+											<td><input class="form-control" type="text" inputmode="numeric" v-model="stage.score" required></td>
+											<td><button type="button" class="btn-close" @click="editor.stages.splice(stageId, 1); if (editor.stages.length==0) editor.stages.push({})"></button></td>
+										</tr>
+										</template>
+									</table>
+									<button type="button" class="btn btn-primary" @click="editor.stages.push({})"> + </button>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn me-2 btn-primary" @click="saveActivity()">確定</button>
+							<button type="button" class="btn me-2 btn-secondary" data-bs-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" tabindex="-1" id="prizeEditor">
+				<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">編輯獎勵表</h5>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="col form-group" >
+								<div>
+									<table>
+										<tr>
+											<td>積分</td>
+											<td>獎勵</td>
+											<td>數量</td>
+										</tr>
+										<template v-for="(prize, prizeId) in editor.prizes" :value="prizeId">
+										<tr>
+											<td><input class="form-control" type="text" inputmode="numeric" v-model="prize.score"></td>
+											<td><input class="form-control" type="text" inputmode="text" v-model="prize.item"></td>
+											<td><input class="form-control" type="text" inputmode="numeric" v-model="prize.qty"></td>
+											<td><button type="button" class="btn-close" @click="editor.prizes.splice(prizeId, 1)"></button></td>
+										</tr>
+										</template>
+									</table>
+									<button type="button" class="btn btn-primary" @click="editor.prizes.push({})"> + </button>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn me-2 btn-primary" data-bs-dismiss="modal" @click="saveActivity()">確定</button>
+							<button type="button" class="btn me-2 btn-secondary" data-bs-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal fade" tabindex="-1" id="prizeCostEditor">
+				<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">編輯全域獎勵價值表</h5>
+							<button type="button" class="btn-close text-reset" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="col form-group" >
+								<div>
+									<table>
+										<tr>
+											<td>顏色</td>
+											<td>獎勵</td>
+											<td>價值</td>
+											<td></td>
+										</tr>
+										<template v-for="(prizeCost, prizeCostId) in editor.prizeCost" :value="prizeCostId">
+										<tr>
+											<td>
+												<select class="form-select form-select-sm" :class="'bg-'+prizeCost.highlight" v-model="prizeCost.highlight">
+													<option value="" class="bg-white">　　</option>
+													<option value="red" class="bg-red">　　</option>
+													<option value="orange" class="bg-orange">　　</option>
+													<option value="green" class="bg-green">　　</option>
+													<option value="blue" class="bg-blue">　　</option>
+													<option value="purple" class="bg-purple">　　</option>
+												</select>
+											</td>
+											<td><input class="form-control" type="text" inputmode="text" v-model="prizeCost.item"></td>
+											<td><input class="form-control" type="text" inputmode="numeric" v-model="prizeCost.score"></td>
+											<td><button type="button" class="btn-close" @click="editor.prizeCost.splice(prizeCostId, 1)"></button></td>
+										</tr>
+										</template>
+									</table>
+									<button type="button" class="btn btn-primary" @click="editor.prizeCost.push({})"> + </button>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<span>
+								<input type="file" id="importPrizeCostBtn" @change="importPrizeCostJson($event)" accept="application/json"  style="display: none" />
+								<label class="btn btn-primary" for="importPrizeCostBtn" style="cursor: pointer !important">匯入</label>
+							</span>
+							<button type="button" class="btn me-2 btn-primary" @click="exportPrizeCostJson()">匯出</button>
+							｜
+							<button type="button" class="btn me-2 btn-primary" @click="resetPrizeCost()">重設</button>
+							｜
+							<button type="button" class="btn me-2 btn-primary" data-bs-dismiss="modal" @click="savePrizeCost()">確定</button>
+							<button type="button" class="btn me-2 btn-secondary" data-bs-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-expand navbar-dark bg-dark">
+				<div class="container-fluid">
+				  <div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+					  <li class="nav-item"><a class="nav-link">選擇活動</a></li>
+					  <li class="nav-item d-flex">
+						<select id="battleStage" class="form-select form-select-sm" v-model="activity.name" @change="loadActivity()">
+							<option v-for="act in activityList" :value="act.name">{{ act.name }}</option>
+						</select>
+					  </li>
+					  <li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						  編輯活動
+						</a>
+						<ul class="dropdown-menu">
+						  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#activityEditor" aria-controls="activityEditor" @click="newActivity()">新增活動</a>
+						  <li><hr class="dropdown-divider"></li>
+						  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#activityEditor" aria-controls="activityEditor" @click="editActivity()">編輯活動內容、關卡</a></li>
+						  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#prizeEditor" aria-controls="prizeEditor" @click="editActivity()">編輯獎勵表</a></li>
+						  <template v-if="isCustomActivity"> 
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#" @click="deleteActivity()">刪除活動</a></li>
+						  </template>
+						  <li><hr class="dropdown-divider"></li>
+						  <li>
+							<input type="file" id="importActivityBtn" @change="importActivityJson($event)" accept="application/json"  style="display: none" />
+							<label class="dropdown-item" href="#" for="importActivityBtn" style="cursor: pointer !important">匯入活動資料</label>
+						  </li>
+						  <li><a class="dropdown-item" href="#" @click="exportActivityJson()">匯出活動資料</a></li>
+						  <li><hr class="dropdown-divider"></li>
+						  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#prizeCostEditor" aria-controls="prizeCostEditor" @click="editActivity()">編輯全域獎勵價值表</a></li>
+						</ul>
+					  </li>
+					</ul>
+				  </div>
+			  
+				</div>
+			  </nav>
+			  <div class="container">
+			<template v-if="activity.name != null && stages.length > 0">
+			<div class="row justify-content-center">
+				<!--<div class="col-xs-11 col-md-11 col-lg-7 text-end" style="position:absolute">
+					<div class="form-check form-switch form-check-inline">
+						<input class="form-check-input" type="checkbox" id="saveInputs" :checked="user.saveInputs" v-model="user.saveInputs">
+						<label class="form-check-label no-select" for="saveInputs">儲存輸入與偏好</label>
+					</div>
+				</div>-->
+				<div class="col-xs-12 col-md-12 col-lg-9 text-center">
+					<h4>新世界狂歡： {{ activity.name }} 計算機</h4>
+					<div class="small">活動日期： {{ getDateStr(activity.startDate) }} 至 {{ getDateStr(activity.endDate) }}</div>
+					<div class="small">剩餘時間： {{ dateCountDown }}</div>
+					<hr>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-xs-12 col-md-4 col-lg-3">
+					<div class="section">
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" class="form-control" type="checkbox" id="isConsumeGemMode" :checked="user.isConsumeGemMode" v-model="user.isConsumeGemMode" >
+							<label class="form-check-label no-select" for="isConsumeGemMode">完全碎鑽模式</label>
+						</div>
+					</div>
+					<div class="section">
+						<span class="sectionTitle">積分</span>
+						<div>活動總分：{{ activity.score }}</div>
+						<div>
+							<label for="targetScore">目標積分</label>
+							<input class="form-control" type="text" inputmode="numeric" id="targetScore" v-model="user.targetScore">
+						</div>
+						<div>
+							<label for="currentScore">現有積分</label>
+							<input class="form-control" type="text" inputmode="numeric" id="currentScore" v-model="user.currentScore">
+						</div>
+					</div>
+
+					<div class="section">
+						<span class="sectionTitle">關卡</span>
+						<div>
+							<label for="battleStage">活動關卡</label>
+							<select id="battleStage" class="form-select form-select-sm" v-model="user.battleStage">
+								<option v-for="(stage, stageId) in stages" :value="stageId">{{ stage.name }}（ {{ stage.energy }} 體）</option>
+							</select>
+						</div>
+						<div v-if="activity.stageExtras != undefined">
+							<div>
+								<label for="battleExtra">活動加成</label>
+								<div v-if="activity.stageExtras.length > 0">
+									<select id="battleExtra" class="form-select form-select-sm" v-model="user.battleExtra">
+										<option v-for="(extra) in activity.stageExtras" :value="extra">{{extra}}%</option>
+									</select>
+								</div>
+								<div v-else>
+									<input class="form-control" type="text" inputmode="numeric" id="battleExtra" v-model="user.battleExtra">
+								</div>
+							</div>
+						</div>
+						<div>
+							<label for="dailyStageEnergy">每日關卡消耗體力</label>
+							<input class="form-control" type="text" inputmode="numeric" id="dailyStageEnergy" v-model="user.dailyStageEnergy">
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" class="form-control" type="checkbox" id="reserveLastDailyStages" :checked="user.isReserveLastDailyStages" v-model="user.isReserveLastDailyStages" >
+							<label class="form-check-label no-select" for="reserveLastDailyStages">最後4天不打每日關卡</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4 col-lg-3">
+					<div class="section">
+						<span class="sectionTitle">體力水</span>
+						<div>
+							<label for="energyBottleBig">上級日月精華</label>
+							<input class="form-control" type="text" inputmode="numeric" id="energyBottleBig" v-model="user.energyBottles.big">
+						</div>
+						<div>
+							<label for="energyBottleSmall">初級日月精華</label>
+							<input class="form-control" type="text" inputmode="numeric" id="energyBottleSmall" v-model="user.energyBottles.small">
+						</div>
+						<div>
+							<label for="energyBottleMini">微型日月精華</label>
+							<input class="form-control" type="text" inputmode="numeric" id="energyBottleMini" v-model="user.energyBottles.mini">
+						</div>
+						<br/>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" class="form-control" type="checkbox" id="buyWeeklyEnergyBottle" :checked="user.isBuyWeeklyEnergyBottle" v-model="user.isBuyWeeklyEnergyBottle" >
+							<label class="form-check-label no-select" for="buyWeeklyEnergyBottle">每週商城購買初級日月精華x2</label>
+						</div>
+						
+					</div>
+
+					<div class="section">
+						<span class="sectionTitle">課金</span>
+						<br />
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="isMonthlyVIPBig" :checked="user.isMonthlyVIPBig" v-model="user.isMonthlyVIPBig">
+							<label class="form-check-label no-select" for="isMonthlyVIPBig">大月卡</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="checkbox" id="isMonthlyVIPSmall" :checked="user.isMonthlyVIPSmall" v-model="user.isMonthlyVIPSmall">
+							<label class="form-check-label no-select" for="isMonthlyVIPSmall">小月卡</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4 col-lg-3 section calculationSection">
+					<span class="sectionTitle">計算結果</span>
+					<div>關卡積分： {{ battleScore }} （CP: {{ battleScoreCP }}） </div>
+					<br>
+					<div>每日回體： {{ sumDailyEnergy }}</div>
+					<div>藥水加持： {{ sumBottleEnergy }}</div>
+					<div>總體力　： {{ sumEnergy }}</div>
+					<div class="small-note">*未包含活動簽到及積分獎勵的體力水</div>
+					<br>
+					<div>目標積分： {{ user.targetScore }}</div>
+					<div>可得積分： {{ estimateScore }}</div>
+					<div>尚欠積分： {{ remainScore }}</div>
+					<br>
+					<div>達成目標需要的體力： {{ requireEnergy }}</div>
+					<div>達成目標需要的碎鑽： {{ remainGem }}</div>
+					<div>碎鑽次數： {{ remainGem / this.game.gemEnergyUsedGem }}</div>
+				</div>
+			
+				<div class="col-xs-12 col-md-12 col-lg-9 section">
+					<div class="sectionTitle prizeTitle no-select" @click="prizePanel.isCollapse = !prizePanel.isCollapse">
+						<i class="fa-solid" :class="prizePanel.isCollapse ? 'fa-square-plus' : 'fa-square-minus'"></i>
+						獎勵
+						<span class="small-note" v-if="prizePanel.isCollapse">（展開列表）</span>
+						<span class="small-note" v-else>（收起列表）</span>
+					</div>
+					<div v-if="!prizePanel.isCollapse">
+						<div>獎勵價值：{{ prizeCP }} 鑽</div>
+						<div class="small">（{{ prizeCostNote() }}）</div>
+						<br>
+
+						<div class="row align-items-center">
+							<div class="col-xs-12 col-md-6 align-self-start">
+								<div class="form-check form-check-inline" title="已獲得獎勵">
+									<input class="form-check-input" type="checkbox" id="showIsGetPrize" :checked="prizePanel.showIsGetPrize" v-model="prizePanel.showIsGetPrize">
+									<label class="form-check-label no-select" for="showIsGetPrize"><i class="fa-solid fa-check"></i></label>
+								</div>
+								<div class="form-check form-check-inline" title="預期可獲得獎勵">
+									<input class="form-check-input" type="checkbox" id="showWillGetPrize" :checked="prizePanel.showWillGetPrize" v-model="prizePanel.showWillGetPrize">
+									<label class="form-check-label no-select" for="showWillGetPrize"><i class="fa-solid fa-arrow-rotate-right"></i></label>
+								</div>
+								<div class="form-check form-check-inline" title="一般回體下無法得到的獎勵">
+									<input class="form-check-input" type="checkbox" id="showNotGetPrize" :checked="prizePanel.showNotGetPrize" v-model="prizePanel.showNotGetPrize">
+									<label class="form-check-label no-select" for="showNotGetPrize"><i class="fa-solid fa-xmark"></i></label>
+								</div>
+								<div class="form-check form-switch form-check-inline">
+									<input class="form-check-input" type="checkbox" id="filterToTargetScore" :checked="prizePanel.filterToTargetScore" v-model="prizePanel.filterToTargetScore">
+									<label class="form-check-label no-select" for="filterToTargetScore">只顯示至目標積分</label>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6 align-self-end">
+								<div class="form-inline">
+									<input class="form-control" type="search" id="filterPrizeText" placeholder="搜尋獎勵" v-model="prizePanel.filterText">
+								</div>
+							</div>
+							
+						</div>
+
+						<table class="table prizeTable" v-if="!prizePanel.isCollapse">
+							<thead>
+								<tr class="header no-select" @click="prizePanel.reverseOrder = !prizePanel.reverseOrder">
+									<th scope="col">#</th></th>
+									<th scope="col">積分
+										<i class="fa-solid" :class="prizePanel.reverseOrder ? 'fa-arrow-up' : 'fa-arrow-down'"></i>
+									</th>
+									<th scope="col">獎勵</th>
+									<th scope="col">數量</th>
+								</tr>
+							</thead>
+							<tbody>
+								<template v-for="prize in filterPrizesList">
+									<tr :class="prizeHighlight(prize.item)">
+										<td><i class="fa-solid" :class="prizeMark(prize.score)"></i></td>
+										<td>{{ prize.score }}</td>
+										<td>{{ prize.item.replace(/^\[.+?\]/i, '') }}</td>
+										<td>{{ prize.qty }}</td>
+									</tr>
+								</template>
+								<tr>
+									<td></td>
+									<td></td>
+									<td style="text-align: right"><b>總數量：</b></td>
+									<td>{{ filterPrizesListTotalQty }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+				
+			</div>
+			</template>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./res/js/main.js"></script>
+	
+</body>
+
+</html>

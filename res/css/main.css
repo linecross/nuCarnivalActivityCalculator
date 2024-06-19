@@ -1,0 +1,70 @@
+body{
+    font-family: "微軟正黑體","Microsoft JhengHei";
+    font-size: 16px;
+    overflow-y: scroll;
+}
+
+.section{
+    margin-bottom: 15px;
+}
+
+.sectionTitle{
+    font-weight: 800;
+    line-height: 2rem;
+}
+
+.form-check-label, .form-check-input, .prizeTitle{
+    cursor: pointer;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.calculationSection{
+    background-color: #ffeee7;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.small-note{
+    font-size: 0.8rem;
+    color:#d90000;
+}
+
+.prizeTable tbody tr:nth-child(even) {
+    background: #f0f9ff;
+}
+
+.prizeTable tbody tr {
+    border-color: #bee5ff;
+}
+
+.prizeTable .header{
+    cursor: pointer;
+}
+
+.prizeTable .fa-solid{
+    width: 16px;
+}
+
+.bg-white{
+    background-color: #fff;
+}
+.bg-red, tr.bg-red td{
+    background-color: rgb(254, 215, 215)
+}
+.bg-orange, tr.bg-orange td{
+    background-color: rgb(255, 216, 179);
+}
+.bg-green, tr.bg-green td{
+    background-color: rgb(207, 246, 202);
+}
+.bg-blue, tr.bg-blue td{
+    background-color: rgb(212, 237, 255)
+}
+.bg-purple, tr.bg-purple td{
+    background-color: rgb(226, 208, 255);
+}

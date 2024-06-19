@@ -1,0 +1,36 @@
+{
+  "activity": {
+    "name": "虛實雨季（復刻）",
+    "startDate": "2024-05-23T15:00:00",
+    "endDate": "2024-06-06T12:00:00",
+    "score": 12720,
+    "stageExtras": null,
+    "SCORE_UNIT": "酸津果"
+  },
+  "stages": [
+    { "name": "花叢-01/05", "energy": 20, "score": 54 },
+    { "name": "花叢-02/06", "energy": 30, "score": 84 },
+    { "name": "花叢-03/07", "energy": 40, "score": 117 },
+    { "name": "花叢-04/08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 225, "item": "金幣", "qty": 100000 },
+    { "score": 870, "item": "晶靈石", "qty": 400 },
+    { "score": 1470, "item": "微型日月精華", "qty": 3 },
+    { "score": 1830, "item": "金幣", "qty": 120000 },
+    { "score": 2700, "item": "晶靈石", "qty": 600 },
+    { "score": 3540, "item": "金幣", "qty": 150000 },
+    { "score": 4440, "item": "初級日月精華", "qty": 2 },
+    { "score": 4800, "item": "晶靈石", "qty": 800 },
+    { "score": 5850, "item": "金幣", "qty": 250000 },
+    { "score": 6060, "item": "夢幻果", "qty": 1 },
+    { "score": 7380, "item": "上級日月精華", "qty": 2 },
+    { "score": 7620, "item": "晶靈石", "qty": 1000 },
+    { "score": 8580, "item": "夢幻果", "qty": 2 },
+    { "score": 9060, "item": "金幣", "qty": 350000 },
+    { "score": 10800, "item": "晶靈石", "qty": 1200 },
+    { "score": 11100, "item": "夢幻果", "qty": 2 },
+    { "score": 12360, "item": "金幣", "qty": 500000 },
+    { "score": 12720, "item": "晶花原石", "qty": 1 }
+  ]
+}

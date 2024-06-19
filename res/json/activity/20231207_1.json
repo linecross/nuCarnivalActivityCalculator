@@ -1,0 +1,23 @@
+{
+  "activity": {
+    "name": "晶霜迴聲",
+    "startDate": "2023-12-07T15:00:00",
+    "endDate": "2024-01-04T12:00:00",
+    "score": 45600,
+    "stageExtras": null,
+    "SCORE_UNIT": "古老曲譜手稿"
+  },
+  "stages": [
+    { "name": "回聲-01/02/03", "energy": 20, "score": 40 },
+    { "name": "回聲-04/05/06", "energy": 30, "score": 80 },
+    { "name": "回聲-07", "energy": 40, "score": 110 },
+    { "name": "回聲-08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 18870, "item": "[背景]元素精靈徘徊的山谷．夜", "qty": 1 },
+    { "score": 24150, "item": "[BGM]BGM046", "qty": 1 },
+    { "score": 33600, "item": "魔力契約十卷", "qty": 1 },
+    { "score": 39000, "item": "晶花原石", "qty": 1 },
+    { "score": 45600, "item": "閃耀晶核", "qty": 1 }
+  ]
+}

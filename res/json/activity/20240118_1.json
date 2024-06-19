@@ -1,0 +1,30 @@
+{
+  "activity": {
+    "name": "銀羽奇蹟（復刻）",
+    "startDate": "2024-01-18T15:00:00",
+    "endDate": "2024-02-01T12:00:00",
+    "score": 13800,
+    "stageExtras": null,
+    "SCORE_UNIT": "驅冬湯"
+  },
+  "stages": [
+    { "name": "圍爐-01/05", "energy": 20, "score": 55 },
+    { "name": "圍爐-02/06", "energy": 30, "score": 85 },
+    { "name": "圍爐-03/07", "energy": 40, "score": 118 },
+    { "name": "圍爐-04/08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 570, "item": "微型日月精華", "qty": 1 },
+    { "score": 660, "item": "晶靈石", "qty": 300 },
+    { "score": 1590, "item": "微型日月精華", "qty": 2 },
+    { "score": 2550, "item": "晶靈石", "qty": 400 },
+    { "score": 4260, "item": "初級日月精華", "qty": 2 },
+    { "score": 4800, "item": "晶靈石", "qty": 500 },
+    { "score": 7380, "item": "辣味驅冬湯", "qty": 1 },
+    { "score": 7860, "item": "晶靈石", "qty": 600 },
+    { "score": 9600, "item": "辣味驅冬湯", "qty": 2 },
+    { "score": 10800, "item": "上級日月精華", "qty": 2 },
+    { "score": 12360, "item": "晶靈石", "qty": 1000 },
+    { "score": 13800, "item": "晶花原石", "qty": 1 }
+  ]
+}

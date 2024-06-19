@@ -1,0 +1,48 @@
+{
+  "activity": {
+    "name": "夕暮狂沙",
+    "startDate": "2024-03-14T15:00:00",
+    "endDate": "2024-04-04T12:00:00",
+    "score": 38400,
+    "stageExtras": [0, 10, 20, 30, 40, 50, 60, 70],
+    "SCORE_UNIT": "繪本故事"
+  },
+  "stages": [
+    { "name": "規矩-01-03", "energy": 20, "score": 30 },
+    { "name": "規矩-04-06", "energy": 30, "score": 50 },
+    { "name": "規矩-07", "energy": 40, "score": 70 },
+    { "name": "規矩-08", "energy": 50, "score": 90 }
+  ],
+  "prizes": [
+    { "score": 1590, "item": "金幣", "qty": 20000 },
+    { "score": 1710, "item": "晶靈石", "qty": 200 },
+    { "score": 2850, "item": "金幣", "qty": 40000 },
+    { "score": 3000, "item": "魔力契約", "qty": 1 },
+    { "score": 4440, "item": "金幣", "qty": 40000 },
+    { "score": 4620, "item": "晶靈石", "qty": 250 },
+    { "score": 6270, "item": "金幣", "qty": 60000 },
+    { "score": 6480, "item": "魔力契約", "qty": 1 },
+    { "score": 8340, "item": "金幣", "qty": 60000 },
+    { "score": 8580, "item": "晶靈石", "qty": 300 },
+    { "score": 10800, "item": "金幣", "qty": 80000 },
+    { "score": 11100, "item": "魔力契約", "qty": 1 },
+    { "score": 12720, "item": "[背景]荒漠小鎮街道．黃昏", "qty": 1 },
+    { "score": 14160, "item": "[背板]夕暮狂沙背板", "qty": 1 },
+    { "score": 14520, "item": "金幣", "qty": 80000 },
+    { "score": 14910, "item": "晶靈石", "qty": 350 },
+    { "score": 17250, "item": "[BGM]BGM050", "qty": 1 },
+    { "score": 18870, "item": "金幣", "qty": 100000 },
+    { "score": 19290, "item": "魔力契約", "qty": 1 },
+    { "score": 23250, "item": "金幣", "qty": 130000 },
+    { "score": 23700, "item": "晶靈石", "qty": 400 },
+    { "score": 25500, "item": "魔力契約十卷", "qty": 1 },
+    { "score": 26940, "item": "金幣", "qty": 200000 },
+    { "score": 29520, "item": "金幣", "qty": 250000 },
+    { "score": 30000, "item": "晶花碎石", "qty": 5 },
+    { "score": 30600, "item": "魔力契約", "qty": 2 },
+    { "score": 33600, "item": "晶花原石", "qty": 1 },
+    { "score": 34200, "item": "魔力契約", "qty": 3 },
+    { "score": 36600, "item": "火屬性鑰匙", "qty": 1 },
+    { "score": 38400, "item": "閃耀晶核", "qty": 1 }
+  ]
+}

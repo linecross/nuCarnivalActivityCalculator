@@ -1,0 +1,16 @@
+{
+  "activity": {
+    "name": "血之秘鑰",
+    "startDate": "2023-11-02T15:00:00",
+    "endDate": "2023-11-23T12:00:00",
+    "score": 40800,
+    "stageExtras": [],
+    "SCORE_UNIT": "純白之證"
+  },
+  "stages": [
+    { "name": "宣示-01/05", "energy": 20, "score": 36 },
+    { "name": "宣示-02/06", "energy": 30, "score": 55 },
+    { "name": "宣示-03/07", "energy": 40, "score": 75 },
+    { "name": "宣示-04/08", "energy": 50, "score": 96 }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "activity": {
+    "name": "聖夜微光（復刻）",
+    "startDate": "2023-12-21T15:00:00",
+    "endDate": "2024-01-04T12:00:00",
+    "score": 12720,
+    "stageExtras": null,
+    "SCORE_UNIT": "聖舫裝飾堆"
+  },
+  "stages": [
+    { "name": "雪仗-01", "energy": 10, "score": 27 },
+    { "name": "雪仗-02", "energy": 20, "score": 55 },
+    { "name": "雪仗-03", "energy": 35, "score": 98 },
+    { "name": "雪仗-04", "energy": 45, "score": 131 },
+    { "name": "雪仗-05", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 660, "item": "晶靈石", "qty": 500 },
+    { "score": 3540, "item": "微型日月精華", "qty": 3 },
+    { "score": 2550, "item": "晶靈石", "qty": 600 },
+    { "score": 3540, "item": "初級日月精華", "qty": 2 },
+    { "score": 4260, "item": "晶靈石", "qty": 800 },
+    { "score": 6060, "item": "迷你聖舫裝飾", "qty": 1 },
+    { "score": 6900, "item": "晶靈石", "qty": 1000 },
+    { "score": 8100, "item": "上級日月精華", "qty": 2 },
+    { "score": 8820, "item": "迷你聖舫裝飾", "qty": 2 },
+    { "score": 11100, "item": "晶靈石", "qty": 1200 },
+    { "score": 12720, "item": "晶花原石", "qty": 1 }
+  ]
+}
