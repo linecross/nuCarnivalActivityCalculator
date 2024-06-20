@@ -70,6 +70,7 @@ var nuCarnivalActivityApp = Vue.createApp({
 					'[背景]': {highlight: 'blue'},
 					'[背板]': {highlight: 'blue'},
 					'[BGM]': {highlight: 'blue'},
+					'[特殊]': {highlight: 'blue'},
 					'光屬性鑰匙': {cost: 1600},
 					'闇屬性鑰匙': {cost: 1600},
 					'火屬性鑰匙': {cost: 1600},
@@ -109,6 +110,13 @@ var nuCarnivalActivityApp = Vue.createApp({
 				var vueObj = this;
 				this.loadActivityList().then(e=>{
 					vueObj.activity.name = vueObj.activityList[0].name;
+					
+					var urlParam=new URLSearchParams(window.location.search);
+					if (urlParam.has('name')){
+						var defaultActivityName = urlParam.get('name');
+						if (vueObj.activityList.find(e=>e.name === defaultActivityName) != null)
+						vueObj.activity.name = defaultActivityName;
+					}
 					vueObj.loadActivity();
 				});
 			}
