@@ -185,15 +185,9 @@
 					<ul class="navbar-nav">
 					  <li class="nav-item"><a class="nav-link">選擇活動</a></li>
 					  <li class="nav-item d-flex">
-						<div class="dropdown">
-							<a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								{{ activity.name }}
-							</a>
-						  
-							<ul id="battleStage" class="dropdown-menu" >
-							  <li v-for="act in activityList" :value="act.name"><a class="dropdown-item" @click="activity.name=act.name;loadActivity()" href="#">{{ act.name }}</a></li>
-							</ul>
-						  </div>
+						<select id="battleStage" class="form-select form-select-sm" v-model="activity.name" @change="loadActivity()">
+							<option v-for="act in activityList" :value="act.name">{{ act.name }}</option>
+						</select>
 					  </li>
 					  <li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
