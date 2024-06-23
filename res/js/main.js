@@ -6,6 +6,8 @@ var nuCarnivalActivityApp = Vue.createApp({
 				stages: [],
 				prizes: [],
 				prizeCost: [],
+				prizesTabStr: '',
+				prizeEditMode: '',
 			},
 			activityList: [],
 			activity: {
@@ -385,6 +387,34 @@ var nuCarnivalActivityApp = Vue.createApp({
 			const modal = bootstrap.Modal.getInstance('#activityEditor');
 			if (modal != null){
 				modal.hide();
+			}
+		},
+		changePrizeEditMode(){
+			if (this.editor.prizeEditMode != 'TAB'){
+				this.editor.prizesTabStr = this.editor.prizes.map(e=>e.score + "\t"+e.item + "\t"+e.qty).join("\n");
+				this.editor.prizeEditMode = 'TAB';
+			}
+			else{
+				var result = [];
+				var splitList = this.editor.prizesTabStr.split("\n");
+				var success = true;
+				for (var item of splitList){
+					if (item.trim().length == 0){
+						continue;
+					}
+					
+					var arr = item.trim().split("\t");
+					if (arr.length < 3 || isNaN(parseInt(arr[0])) || (arr[2] != '' && isNaN(parseInt(arr[2])))){
+						alert('格式不正確，請檢查！\n'+item);
+						success = false;
+						break;
+					}
+					result.push({score:parseInt(arr[0].trim()), item:arr[1].trim(), qty:parseInt(arr[2].trim()) });
+				}
+				if (success){
+					this.editor.prizes = result;
+					this.editor.prizeEditMode = '';
+				}
 			}
 		},
 		async resetPrizeCost(){
