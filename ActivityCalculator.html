@@ -90,7 +90,7 @@
 						</div>
 						<div class="modal-body">
 							<div class="col form-group" >
-								<div>
+								<div v-if="editor.prizeEditMode != 'TAB'">
 									<table>
 										<tr>
 											<td>積分</td>
@@ -108,11 +108,17 @@
 									</table>
 									<button type="button" class="btn btn-primary" @click="editor.prizes.push({})"> + </button>
 								</div>
+								<div v-else>
+									<p>TAB模式：讓你複製到試算表，編輯完再貼回來</p>
+									<textarea cols="30" rows="8" v-model="editor.prizesTabStr">{{editor.prizesTabStr}}</textarea>
+								</div>
 							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn me-2 btn-primary" data-bs-dismiss="modal" @click="saveActivity()">確定</button>
-							<button type="button" class="btn me-2 btn-secondary" data-bs-dismiss="modal">取消</button>
+							<button type="button" class="btn me-2 btn-primary" @click="changePrizeEditMode()">TAB模式</button>
+							|
+							<button v-show="editor.prizeEditMode != 'TAB'" type="button" class="btn me-2 btn-primary" data-bs-dismiss="modal" @click="saveActivity()">確定</button>
+							<button v-show="editor.prizeEditMode != 'TAB'" type="button" class="btn me-2 btn-secondary" data-bs-dismiss="modal">取消</button>
 						</div>
 					</div>
 				</div>
