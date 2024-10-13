@@ -1,0 +1,43 @@
+{
+  "activity": {
+    "name": "錆色國度（復刻）",
+    "startDate": "2024-10-10T15:00:00",
+    "endDate": "2024-10-24T12:00:00",
+    "score": 12720,
+    "stageExtras": null,
+    "SCORE_UNIT": "晶能礦吊墜"
+  },
+  "stages": [
+    { "name": "研究-01", "energy": 15, "score": 35 },
+    { "name": "研究-02", "energy": 20, "score": 50 },
+    { "name": "研究-03", "energy": 25, "score": 60 },
+    { "name": "研究-04", "energy": 30, "score": 80 },
+    { "name": "研究-05", "energy": 35, "score": 95 },
+    { "name": "研究-06", "energy": 40, "score": 110 },
+    { "name": "研究-07", "energy": 45, "score": 130 },
+    { "name": "研究-08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 300, "item": "晶靈石", "qty": 200 },
+    { "score": 660, "item": "金幣", "qty": 50000 },
+    { "score": 750, "item": "晶靈石", "qty": 300 },
+    { "score": 990, "item": "初級日月精華", "qty": 1 },
+    { "score": 1590, "item": "晶靈石", "qty": 400 },
+    { "score": 2550, "item": "晶靈石", "qty": 500 },
+    { "score": 2700, "item": "金幣", "qty": 80000 },
+    { "score": 3360, "item": "晶靈石", "qty": 600 },
+    { "score": 3540, "item": "金幣", "qty": 90000 },
+    { "score": 4440, "item": "晶靈石", "qty": 800 },
+    { "score": 4620, "item": "金幣", "qty": 100000 },
+    { "score": 5220, "item": "初級日月精華", "qty": 2 },
+    { "score": 5850, "item": "[特殊]融晶礦吊墜", "qty": 1 },
+    { "score": 6060, "item": "金幣", "qty": 200000 },
+    { "score": 7140, "item": "晶靈石", "qty": 800 },
+    { "score": 7860, "item": "金幣", "qty": 250000 },
+    { "score": 8580, "item": "[特殊]融晶礦吊墜", "qty": 2 },
+    { "score": 9300, "item": "上級日月精華", "qty": 2 },
+    { "score": 11100, "item": "[特殊]融晶礦吊墜", "qty": 2 },
+    { "score": 11400, "item": "金幣", "qty": 300000 },
+    { "score": 12720, "item": "晶花原石", "qty": 1 }
+  ]
+}
