@@ -1,0 +1,32 @@
+{
+  "activity": {
+    "name": "晶霜迴聲（復刻）",
+    "startDate": "2024-12-19T15:00",
+    "endDate": "2025-01-02T12:00",
+    "score": 12720,
+    "stageExtras": null,
+    "SCORE_UNIT": "古老曲譜手稿"
+  },
+  "stages": [
+    { "name": "回聲-01/02/03", "energy": "20", "score": "54" },
+    { "name": "回聲-04/05/06", "energy": "30", "score": "84" },
+    { "name": "回聲-07", "energy": "40", "score": "118" },
+    { "name": "回聲-08", "energy": "50", "score": "150" }
+  ],
+  "prizes": [
+    { "score": 300, "item": "金幣", "qty": 50000 },
+    { "score": 750, "item": "晶靈石", "qty": 400 },
+    { "score": 2100, "item": "金幣", "qty": 100000 },
+    { "score": 2250, "item": "晶靈石", "qty": 500 },
+    { "score": 4080, "item": "金幣", "qty": 150000 },
+    { "score": 4260, "item": "晶靈石", "qty": 600 },
+    { "score": 6270, "item": "金幣", "qty": 350000 },
+    { "score": 6480, "item": "追憶曲譜手稿", "qty": 1 },
+    { "score": 7620, "item": "晶靈石", "qty": 800 },
+    { "score": 9060, "item": "追憶曲譜手稿", "qty": 2 },
+    { "score": 9900, "item": "金幣", "qty": 500000 },
+    { "score": 11400, "item": "追憶曲譜手稿", "qty": 2 },
+    { "score": 12000, "item": "晶靈石", "qty": 1200 },
+    { "score": 12720, "item": "晶花原石", "qty": 1 }
+  ]
+}
