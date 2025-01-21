@@ -1,0 +1,44 @@
+{
+  "activity": {
+    "name": "勇闖新☆世界（復刻）",
+    "startDate": "2025-01-16T15:00:00",
+    "endDate": "2025-01-30T12:00:00",
+    "score": 12720,
+    "stageExtras": null,
+    "SCORE_UNIT": "情趣用品箱"
+  },
+  "stages": [
+    { "name": "戰鬥-01", "energy": 15, "score": 35 },
+    { "name": "戰鬥-02", "energy": 20, "score": 50 },
+    { "name": "戰鬥-03", "energy": 25, "score": 60 },
+    { "name": "戰鬥-04", "energy": 30, "score": 80 },
+    { "name": "戰鬥-05", "energy": 35, "score": 95 },
+    { "name": "戰鬥-06", "energy": 40, "score": 110 },
+    { "name": "戰鬥-07", "energy": 45, "score": 130 },
+    { "name": "戰鬥-08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 200, "item": "晶靈石", "qty": 200 },
+    { "score": 660, "item": "金幣", "qty": 30000 },
+    { "score": 750, "item": "晶靈石", "qty": 300 },
+    { "score": 870, "item": "初級日月精華", "qty": 1 },
+    { "score": 1470, "item": "金幣", "qty": 60000 },
+    { "score": 1590, "item": "晶靈石", "qty": 400 },
+    { "score": 2550, "item": "晶靈石", "qty": 500 },
+    { "score": 2700, "item": "金幣", "qty": 90000 },
+    { "score": 3360, "item": "晶靈石", "qty": 600 },
+    { "score": 3540, "item": "金幣", "qty": 120000 },
+    { "score": 4620, "item": "晶靈石", "qty": 800 },
+    { "score": 4800, "item": "金幣", "qty": 160000 },
+    { "score": 5430, "item": "初級日月精華", "qty": 2 },
+    { "score": 6060, "item": "[特殊]歡愉玩趣箱", "qty": 1 },
+    { "score": 6270, "item": "金幣", "qty": 200000 },
+    { "score": 7140, "item": "晶靈石", "qty": 800 },
+    { "score": 8100, "item": "金幣", "qty": 250000 },
+    { "score": 8820, "item": "[特殊]歡愉玩趣箱", "qty": 2 },
+    { "score": 9300, "item": "上級日月精華", "qty": 2 },
+    { "score": 11100, "item": "[特殊]歡愉玩趣箱", "qty": 2 },
+    { "score": 11400, "item": "金幣", "qty": 300000 },
+    { "score": 12720, "item": "晶花原石", "qty": 1 }
+  ]
+}
