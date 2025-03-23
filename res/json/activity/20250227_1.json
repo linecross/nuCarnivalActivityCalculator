@@ -1,0 +1,43 @@
+{
+  "activity": {
+    "name": "薔薇盛宴",
+    "startDate": "2025-02-27T15:00:00",
+    "endDate": "2025-03-27T12:00:00",
+    "score": 52200,
+    "stageExtras": null,
+    "SCORE_UNIT": "月光薔薇"
+  },
+  "stages": [
+    { "name": "見證-01/02/03", "energy": 15, "score": 35 },
+    { "name": "見證-04/05/06", "energy": 30, "score": 80 },
+    { "name": "見證-07", "energy": 45, "score": 125 },
+    { "name": "見證-08", "energy": 60, "score": 180 }
+  ],
+  "prizes": [
+    { "score": 990, "item": "魔力契約", "qty": 1 },
+    { "score": 1470, "item": "晶靈石", "qty": 150 },
+    { "score": 1950, "item": "魔力契約", "qty": 1 },
+    { "score": 3000, "item": "晶靈石", "qty": 200 },
+    { "score": 3540, "item": "魔力契約", "qty": 1 },
+    { "score": 5010, "item": "魔力契約", "qty": 1 },
+    { "score": 5640, "item": "晶靈石", "qty": 250 },
+    { "score": 7140, "item": "魔力契約", "qty": 2 },
+    { "score": 8580, "item": "晶靈石", "qty": 300 },
+    { "score": 9300, "item": "魔力契約", "qty": 2 },
+    { "score": 11700, "item": "魔力契約", "qty": 2 },
+    { "score": 12720, "item": "晶靈石", "qty": 350 },
+    { "score": 16080, "item": "[背景]貴族學校空中花園．日", "qty": 1 },
+    { "score": 18450, "item": "[背板]薔薇盛宴背板", "qty": 1 },
+    { "score": 21900, "item": "魔力契約", "qty": 3 },
+    { "score": 22350, "item": "[BGM]BGM063", "qty": 1 },
+    { "score": 23250, "item": "晶靈石", "qty": 400 },
+    { "score": 28440, "item": "魔力契約", "qty": 3 },
+    { "score": 30000, "item": "晶靈石", "qty": 600 },
+    { "score": 32400, "item": "魔力契約", "qty": 10 },
+    { "score": 37200, "item": "魔力契約", "qty": 3 },
+    { "score": 38400, "item": "晶花原石", "qty": 1 },
+    { "score": 41400, "item": "晶靈石", "qty": 800 },
+    { "score": 45000, "item": "魔力契約", "qty": 4 },
+    { "score": 46200, "item": "閃耀晶核", "qty": 1 }
+  ]
+}
