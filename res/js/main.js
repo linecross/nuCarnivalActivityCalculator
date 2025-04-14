@@ -72,6 +72,7 @@ var nuCarnivalActivityApp = Vue.createApp({
 					'[背景]': {highlight: 'blue'},
 					'[背板]': {highlight: 'blue'},
 					'[BGM]': {highlight: 'blue'},
+					'[小屋]': {highlight: 'blue'},
 					'[特殊]': {highlight: 'blue'},
 					'光屬性鑰匙': {cost: 1600},
 					'闇屬性鑰匙': {cost: 1600},

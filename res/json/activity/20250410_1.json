@@ -1,0 +1,40 @@
+{
+  "activity": {
+    "name": "監禁．騷亂．大反動（復刻）",
+    "startDate": "2025-04-10T15:00:00",
+    "endDate": "2025-04-24T12:00:00",
+    "score": 13800,
+    "stageExtras": null,
+    "SCORE_UNIT": "烏洞木"
+  },
+  "stages": [
+    { "name": "紀律-01/02/03", "energy": 20, "score": 55 },
+    { "name": "紀律-04/05/06", "energy": 30, "score": 85 },
+    { "name": "紀律-07", "energy": 40, "score": 118 },
+    { "name": "紀律-08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 300, "item": "晶靈石", "qty": 100 },
+    { "score": 660, "item": "金幣", "qty": 60000 },
+    { "score": 750, "item": "晶靈石", "qty": 200 },
+    { "score": 1350, "item": "晶靈石", "qty": 300 },
+    { "score": 1470, "item": "金幣", "qty": 60000 },
+    { "score": 2100, "item": "晶靈石", "qty": 400 },
+    { "score": 2250, "item": "金幣", "qty": 70000 },
+    { "score": 3000, "item": "晶靈石", "qty": 500 },
+    { "score": 3180, "item": "金幣", "qty": 70000 },
+    { "score": 4260, "item": "晶靈石", "qty": 600 },
+    { "score": 4400, "item": "金幣", "qty": 80000 },
+    { "score": 5220, "item": "晶靈石", "qty": 700 },
+    { "score": 6060, "item": "金幣", "qty": 100000 },
+    { "score": 6690, "item": "[特殊]玄木", "qty": 1 },
+    { "score": 7380, "item": "金幣", "qty": 130000 },
+    { "score": 8100, "item": "晶靈石", "qty": 700 },
+    { "score": 9300, "item": "金幣", "qty": 160000 },
+    { "score": 9600, "item": "[特殊]玄木", "qty": 2 },
+    { "score": 11400, "item": "金幣", "qty": 200000 },
+    { "score": 12000, "item": "[特殊]玄木", "qty": 2 },
+    { "score": 13440, "item": "金幣", "qty": 250000 },
+    { "score": 13800, "item": "晶花原石", "qty": 1 }
+  ]
+}
