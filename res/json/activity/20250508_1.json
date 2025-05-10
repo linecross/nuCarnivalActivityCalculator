@@ -1,0 +1,42 @@
+{
+  "activity": {
+    "name": "迷藏的邀約函（復刻）",
+    "startDate": "2025-05-08T15:00",
+    "endDate": "2025-05-22T12:00",
+    "score": 13080,
+    "stageExtras": null,
+    "SCORE_UNIT": "老式咖啡壺"
+  },
+  "stages": [
+    { "name": "偵查-01/02/03", "energy": 20, "score": 55 },
+    { "name": "偵查-04/05/06", "energy": 30, "score": 85 },
+    { "name": "偵查-07", "energy": 40, "score": 115 },
+    { "name": "偵查-08", "energy": 50, "score": 145 }
+  ],
+  "prizes": [
+    { "score": 300, "item": "晶靈石", "qty": 100 },
+    { "score": 660, "item": "金幣", "qty": 70000 },
+    { "score": 750, "item": "晶靈石", "qty": 200 },
+    { "score": 990, "item": "微級日月精華", "qty": 3 },
+    { "score": 1350, "item": "晶靈石", "qty": 300 },
+    { "score": 2100, "item": "金幣", "qty": 70000 },
+    { "score": 2250, "item": "晶靈石", "qty": 400 },
+    { "score": 3000, "item": "金幣", "qty": 80000 },
+    { "score": 3180, "item": "晶靈石", "qty": 500 },
+    { "score": 3540, "item": "初級日月精華", "qty": 1 },
+    { "score": 4440, "item": "晶靈石", "qty": 600 },
+    { "score": 4620, "item": "金幣", "qty": 100000 },
+    { "score": 5430, "item": "晶靈石", "qty": 700 },
+    { "score": 6270, "item": "金幣", "qty": 130000 },
+    { "score": 6480, "item": "[特殊]釉彩咖啡壺", "qty": 3 },
+    { "score": 7620, "item": "金幣", "qty": 160000 },
+    { "score": 8820, "item": "[特殊]釉彩咖啡壺", "qty": 3 },
+    { "score": 9060, "item": "初級日月精華", "qty": 2 },
+    { "score": 9300, "item": "上級日月精華", "qty": 2 },
+    { "score": 9900, "item": "金幣", "qty": 180000 },
+    { "score": 10200, "item": "晶靈石", "qty": 700 },
+    { "score": 11400, "item": "[特殊]釉彩咖啡壺", "qty": 4 },
+    { "score": 12040, "item": "金幣", "qty": 250000 },
+    { "score": 13080, "item": "晶花原石", "qty": 1 }
+  ]
+}
