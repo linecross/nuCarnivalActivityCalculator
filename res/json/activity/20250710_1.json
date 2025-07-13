@@ -1,0 +1,42 @@
+{
+  "activity": {
+    "name": "全力求勝！決戰無人島（復刻）",
+    "startDate": "2025-07-10T15:00",
+    "endDate": "2025-07-24T12:00",
+    "score": 13800,
+    "stageExtras": null,
+    "SCORE_UNIT": "應援花束"
+  },
+  "stages": [
+    { "name": "競技-01", "energy": 20, "score": 55 },
+    { "name": "競技-02", "energy": 30, "score": 85 },
+    { "name": "競技-03", "energy": 40, "score": 115 },
+    { "name": "競技-04", "energy": 50, "score": 145 }
+  ],
+  "prizes": [
+    { "score": 300, "item": "晶靈石", "qty": 100 },
+    { "score": 750, "item": "晶靈石", "qty": 200 },
+    { "score": 990, "item": "微級日月精華", "qty": 3 },
+    { "score": 1350, "item": "晶靈石", "qty": 300 },
+    { "score": 1470, "item": "金幣", "qty": 80000 },
+    { "score": 2100, "item": "晶靈石", "qty": 400 },
+    { "score": 2250, "item": "金幣", "qty": 90000 },
+    { "score": 3000, "item": "晶靈石", "qty": 500 },
+    { "score": 3180, "item": "金幣", "qty": 100000 },
+    { "score": 3540, "item": "初級日月精華", "qty": 1 },
+    { "score": 4260, "item": "晶靈石", "qty": 600 },
+    { "score": 4440, "item": "金幣", "qty": 100000 },
+    { "score": 5220, "item": "晶靈石", "qty": 700 },
+    { "score": 6060, "item": "金幣", "qty": 120000 },
+    { "score": 6900, "item": "[特殊]乾燥花束", "qty": 1 },
+    { "score": 8100, "item": "晶靈石", "qty": 700 },
+    { "score": 8580, "item": "初級日月精華", "qty": 2 },
+    { "score": 8820, "item": "上級日月精華", "qty": 2 },
+    { "score": 9300, "item": "金幣", "qty": 180000 },
+    { "score": 9600, "item": "[特殊]乾燥花束", "qty": 2 },
+    { "score": 11400, "item": "金幣", "qty": 200000 },
+    { "score": 12000, "item": "[特殊]乾燥花束", "qty": 2 },
+    { "score": 13440, "item": "金幣", "qty": 300000 },
+    { "score": 13800, "item": "晶花原石", "qty": 1 }
+  ]
+}
