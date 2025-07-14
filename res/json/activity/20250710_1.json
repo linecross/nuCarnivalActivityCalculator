@@ -10,8 +10,8 @@
   "stages": [
     { "name": "競技-01", "energy": 20, "score": 55 },
     { "name": "競技-02", "energy": 30, "score": 85 },
-    { "name": "競技-03", "energy": 40, "score": 115 },
-    { "name": "競技-04", "energy": 50, "score": 145 }
+    { "name": "競技-03", "energy": 40, "score": 116 },
+    { "name": "競技-04", "energy": 50, "score": 150 }
   ],
   "prizes": [
     { "score": 300, "item": "晶靈石", "qty": 100 },
