@@ -1,0 +1,38 @@
+{
+  "activity": {
+    "name": "來自星界的呼喚（復刻）",
+    "startDate": "2025-08-14T15:00",
+    "endDate": "2025-08-28T12:00",
+    "score": 13800,
+    "stageExtras": null,
+    "SCORE_UNIT": "存聲板碎片"
+  },
+  "stages": [
+    { "name": "流星雨-01/05", "energy": 20, "score": 55 },
+    { "name": "流星雨-02/06", "energy": 30, "score": 85 },
+    { "name": "流星雨-03/07", "energy": 40, "score": 118 },
+    { "name": "流星雨-04/08", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 480, "item": "金幣", "qty": 40000 },
+    { "score": 570, "item": "微型日月精華", "qty": 1 },
+    { "score": 660, "item": "晶靈石", "qty": 300 },
+    { "score": 1590, "item": "微型日月精華", "qty": 2 },
+    { "score": 1710, "item": "金幣", "qty": 60000 },
+    { "score": 2550, "item": "晶靈石", "qty": 500 },
+    { "score": 3180, "item": "金幣", "qty": 80000 },
+    { "score": 4440, "item": "金幣", "qty": 100000 },
+    { "score": 4620, "item": "晶靈石", "qty": 700 },
+    { "score": 6270, "item": "初級日月精華", "qty": 2 },
+    { "score": 6690, "item": "金幣", "qty": 200000 },
+    { "score": 7140, "item": "[特殊]廢棄存聲板", "qty": 1 },
+    { "score": 7860, "item": "晶靈石", "qty": 900 },
+    { "score": 9300, "item": "金幣", "qty": 300000 },
+    { "score": 9600, "item": "[特殊]廢棄存聲板", "qty": 2 },
+    { "score": 10500, "item": "金幣", "qty": 400000 },
+    { "score": 10800, "item": "上級日月精華", "qty": 2 },
+    { "score": 11700, "item": "[特殊]廢棄存聲板", "qty": 2 },
+    { "score": 12360, "item": "晶靈石", "qty": 1200 },
+    { "score": 13800, "item": "晶花原石", "qty": 1 }
+  ]
+}
