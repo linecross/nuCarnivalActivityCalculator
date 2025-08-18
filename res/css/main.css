@@ -68,3 +68,11 @@ body{
 .bg-purple, tr.bg-purple td{
     background-color: rgb(226, 208, 255);
 }
+
+.prizeTag{
+    font-weight: bold;
+    background-color: #ffd68d;
+    color: black;
+    padding: 3px 8px;
+    
+}

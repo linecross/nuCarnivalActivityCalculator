@@ -210,6 +210,8 @@
 						  <li><a class="dropdown-item" href="#" @click="exportActivityJson()">匯出活動資料</a></li>
 						  <li><hr class="dropdown-divider"></li>
 						  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#prizeCostEditor" aria-controls="prizeCostEditor" @click="editActivity()">編輯全域獎勵價值表</a></li>
+						  <li><hr class="dropdown-divider"></li>
+						  <li><a class="dropdown-item" href="#" @click="clearUserInputs()">清除緩存記錄</a></li>
 						</ul>
 					  </li>
 					</ul>
@@ -396,7 +398,10 @@
 									<tr :class="prizeHighlight(prize.item)">
 										<td><i class="fa-solid" :class="prizeMark(prize.score)"></i></td>
 										<td>{{ prize.score }}</td>
-										<td>{{ prize.item.replace(/^\[.+?\]/i, '') }}</td>
+										<td>
+											<!-- <span class="prizeTag" v-if="getPrizeTag(prize.item) != null">{{ getPrizeTag(prize.item) }}</span> -->
+											{{ prize.item.replace(/^\[.+?\]/i, '') }}
+										</td>
 										<td>{{ prize.qty }}</td>
 									</tr>
 								</template>

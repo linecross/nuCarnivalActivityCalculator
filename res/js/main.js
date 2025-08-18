@@ -208,6 +208,11 @@ var nuCarnivalActivityApp = Vue.createApp({
 				+ ('0'+date.getHours()).slice(-2) + ':' 
 				+ ('0'+date.getMinutes()).slice(-2);
 		},
+		getPrizeTag(prize){
+			var match = prize.match(/^\[(.*?)\]/);
+			var tag = match ? match[1] : null;
+			return tag;
+		},
 		async loadActivityList(){
 			var customActivityList = await this.db.activity.toArray();
 			if (customActivityList != null && customActivityList.length > 0){
@@ -510,6 +515,17 @@ var nuCarnivalActivityApp = Vue.createApp({
 				}
 			}
 			this.db.userPref.put(JSON.parse(JSON.stringify(map)));
+		},
+		async clearUserInputs(){
+			if (confirm('確定清除所有緩存記錄？\n現有積分、自訂活動及全域獎勵價值表等資料將會清除！')) {
+				this.activityList = this.activityList.filter(e=>!e.custom);
+				await this.db.activity.clear();
+				await this.db.userInput.clear();
+				await this.db.userPref.clear();
+				this.loadActivityList();
+				this.activity.name = this.activityList[0].name;
+				this.loadActivity();
+			}
 		},
 		async exportActivityJson(){
 			if (this.activity.custom){
