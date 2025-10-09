@@ -767,15 +767,22 @@ var nuCarnivalActivityApp = Vue.createApp({
 		},
 		prizeCP(){
 			var cp=0;
-			const regex = new RegExp(/^\[.+?\]/);
+			const regexItem = new RegExp(/^\[.+?\](.+?)$/);
+			const regexType = new RegExp(/^\[.+?\]/);
 			var prizeList = this.filterPrizesList;
 			for (var prize of prizeList){
 				var item = null;
 				if (this.prizeCost[prize.item]){
 					item = prize.item;
 				}
-				else if (regex.test(prize.item)){
-					var type = regex.exec(prize.item)[0];
+				else if (regexItem.test(prize.item)){
+					var itemName = regexItem.exec(prize.item)[1];
+					if (this.prizeCost[itemName]){
+						item = itemName;
+					}
+				}
+				else if (regexType.test(prize.item)){
+					var type = regexType.exec(prize.item)[0];
 					if (this.prizeCost[type]){
 						item = type;
 					}
