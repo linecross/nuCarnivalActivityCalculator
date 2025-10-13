@@ -1,0 +1,40 @@
+{
+  "activity": {
+    "name": "甜蜜♡心動爆擊（復刻）",
+    "startDate": "2025-10-09T15:00:00",
+    "endDate": "2025-10-23T12:00:00",
+    "score": 15300,
+    "stageExtras": null,
+    "SCORE_UNIT": "噗滋噗滋好吃醬"
+  },
+  "stages": [
+    { "name": "萌欸萌欸♡-01", "energy": 20, "score": 55 },
+    { "name": "萌欸萌欸♡-02", "energy": 30, "score": 85 },
+    { "name": "萌欸萌欸♡-03", "energy": 40, "score": 115 },
+    { "name": "萌欸萌欸♡-04", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 450, "item": "金幣", "qty": 30000 },
+    { "score": 540, "item": "微型日月精華", "qty": 3 },
+    { "score": 630, "item": "晶靈石", "qty": 100 },
+    { "score": 1440, "item": "金幣", "qty": 50000 },
+    { "score": 2520, "item": "晶靈石", "qty": 200 },
+    { "score": 2820, "item": "金幣", "qty": 80000 },
+    { "score": 4200, "item": "金幣", "qty": 100000 },
+    { "score": 4950, "item": "初級日月精華", "qty": 1 },
+    { "score": 5790, "item": "晶靈石", "qty": 300 },
+    { "score": 6000, "item": "初級日月精華", "qty": 1 },
+    { "score": 6210, "item": "金幣", "qty": 150000 },
+    { "score": 6630, "item": "[特殊]滑順咕嚕奶香醬", "qty": 1 },
+    { "score": 8040, "item": "晶靈石", "qty": 400 },
+    { "score": 8760, "item": "[特殊]滑順咕嚕奶香醬", "qty": 1 },
+    { "score": 9000, "item": "金幣", "qty": 200000 },
+    { "score": 9840, "item": "[特殊]滑順咕嚕奶香醬", "qty": 1 },
+    { "score": 11040, "item": "[特殊]滑順咕嚕奶香醬", "qty": 1 },
+    { "score": 11340, "item": "金幣", "qty": 400000 },
+    { "score": 12300, "item": "[特殊]滑順咕嚕奶香醬", "qty": 1 },
+    { "score": 13380, "item": "上級日月精華", "qty": 2 },
+    { "score": 13740, "item": "晶靈石", "qty": 800 },
+    { "score": 15240, "item": "晶花原石", "qty": 1 }
+  ]
+}
