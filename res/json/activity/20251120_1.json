@@ -1,0 +1,40 @@
+{
+  "activity": {
+    "name": "林野奇蹟（復刻）",
+    "startDate": "2025-11-20T15:00:00",
+    "endDate": "2025-12-04T12:00:00",
+    "score": 15300,
+    "stageExtras": null,
+    "SCORE_UNIT": "噗滋噗滋好吃醬"
+  },
+  "stages": [
+    { "name": "備藥-01", "energy": 20, "score": 55 },
+    { "name": "備藥-02", "energy": 30, "score": 85 },
+    { "name": "備藥-03", "energy": 40, "score": 115 },
+    { "name": "備藥-04", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 480, "item": "金幣", "qty": 30000 },
+    { "score": 570, "item": "微型日月精華", "qty": 3 },
+    { "score": 660, "item": "晶靈石", "qty": 100 },
+    { "score": 1470, "item": "金幣", "qty": 50000 },
+    { "score": 2550, "item": "晶靈石", "qty": 200 },
+    { "score": 2850, "item": "金幣", "qty": 80000 },
+    { "score": 4440, "item": "金幣", "qty": 100000 },
+    { "score": 5220, "item": "初級日月精華", "qty": 1 },
+    { "score": 6060, "item": "晶靈石", "qty": 300 },
+    { "score": 6270, "item": "初級日月精華", "qty": 1 },
+    { "score": 6480, "item": "金幣", "qty": 150000 },
+    { "score": 6900, "item": "[特殊]綠蔭醫典", "qty": 1 },
+    { "score": 8340, "item": "晶靈石", "qty": 400 },
+    { "score": 9060, "item": "金幣", "qty": 200000 },
+    { "score": 9300, "item": "[特殊]綠蔭醫典", "qty": 1 },
+    { "score": 10200, "item": "[特殊]綠蔭醫典", "qty": 1 },
+    { "score": 11400, "item": "[特殊]綠蔭醫典", "qty": 1 },
+    { "score": 11700, "item": "金幣", "qty": 400000 },
+    { "score": 12360, "item": "[特殊]綠蔭醫典", "qty": 1 },
+    { "score": 13080, "item": "上級日月精華", "qty": 2 },
+    { "score": 13800, "item": "晶靈石", "qty": 800 },
+    { "score": 15300, "item": "晶花原石", "qty": 1 }
+  ]
+}
