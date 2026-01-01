@@ -1,0 +1,33 @@
+{
+  "activity": {
+    "name": "未眠遊樂園（復刻）",
+    "startDate": "2026-01-01T15:00",
+    "endDate": "2026-01-15T12:00",
+    "score": "15240",
+    "stageExtras": null,
+    "SCORE_UNIT": "入園券"
+  },
+  "stages": [
+    { "name": "籌備-01", "energy": 20, "score": 55 },
+    { "name": "籌備-02", "energy": 30, "score": 85 },
+    { "name": "籌備-03", "energy": 40, "score": 115 },
+    { "name": "籌備-04", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 540, "item": "微型日月精華", "qty": 3 },
+    { "score": 630, "item": "晶靈石", "qty": 100 },
+    { "score": 2520, "item": "晶靈石", "qty": 200 },
+    { "score": 4950, "item": "初級日月精華", "qty": 1 },
+    { "score": 5790, "item": "晶靈石", "qty": 300 },
+    { "score": 6000, "item": "初級日月精華", "qty": 1 },
+    { "score": 6630, "item": "[特殊]樂園票根", "qty": 1 },
+    { "score": 8040, "item": "晶靈石", "qty": 400 },
+    { "score": 8760, "item": "[特殊]樂園票根", "qty": 1 },
+    { "score": 9840, "item": "[特殊]樂園票根", "qty": 1 },
+    { "score": 11040, "item": "[特殊]樂園票根", "qty": 1 },
+    { "score": 12300, "item": "[特殊]樂園票根", "qty": 1 },
+    { "score": 13020, "item": "上級日月精華", "qty": 1 },
+    { "score": 13740, "item": "晶靈石", "qty": 800 },
+    { "score": 15240, "item": "晶花原石", "qty": 1 }
+  ]
+}
