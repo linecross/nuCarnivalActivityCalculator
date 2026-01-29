@@ -1,0 +1,33 @@
+{
+  "activity": {
+    "name": "歧夢迴路（復刻）",
+    "startDate": "2026-01-29T15:00",
+    "endDate": "2026-02-12T12:00",
+    "score": "14460",
+    "stageExtras": null,
+    "SCORE_UNIT": "占卜水晶球"
+  },
+  "stages": [
+    { "name": "迴路-01", "energy": 20, "score": 55 },
+    { "name": "迴路-02", "energy": 30, "score": 85 },
+    { "name": "迴路-03", "energy": 40, "score": 115 },
+    { "name": "迴路-04", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 540, "item": "微型日月精華", "qty": 3 },
+    { "score": 630, "item": "晶靈石", "qty": 100 },
+    { "score": 2370, "item": "晶靈石", "qty": 200 },
+    { "score": 4950, "item": "初級日月精華", "qty": 1 },
+    { "score": 5790, "item": "晶靈石", "qty": 300 },
+    { "score": 6000, "item": "初級日月精華", "qty": 1 },
+    { "score": 6630, "item": "[特殊]聖光預示球", "qty": 1 },
+    { "score": 8040, "item": "晶靈石", "qty": 400 },
+    { "score": 9000, "item": "[特殊]聖光預示球", "qty": 1 },
+    { "score": 9540, "item": "[特殊]聖光預示球", "qty": 1 },
+    { "score": 10740, "item": "[特殊]聖光預示球", "qty": 1 },
+    { "score": 11640, "item": "[特殊]聖光預示球", "qty": 1 },
+    { "score": 12300, "item": "上級日月精華", "qty": 1 },
+    { "score": 13020, "item": "晶靈石", "qty": 800 },
+    { "score": 14460, "item": "晶花原石", "qty": 1 }
+  ]
+}
