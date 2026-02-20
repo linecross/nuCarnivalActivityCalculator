@@ -1,0 +1,33 @@
+{
+  "activity": {
+    "name": "無聲黯刃（復刻）",
+    "startDate": "2026-02-19T15:00",
+    "endDate": "2026-03-05T12:00",
+    "score": "14460",
+    "stageExtras": null,
+    "SCORE_UNIT": "實驗筆記"
+  },
+  "stages": [
+    { "name": "無聲-01", "energy": 20, "score": 55 },
+    { "name": "無聲-02", "energy": 30, "score": 85 },
+    { "name": "無聲-03", "energy": 40, "score": 115 },
+    { "name": "無聲-04", "energy": 50, "score": 150 }
+  ],
+  "prizes": [
+    { "score": 540, "item": "微型日月精華", "qty": 3 },
+    { "score": 630, "item": "晶靈石", "qty": 100 },
+    { "score": 2520, "item": "晶靈石", "qty": 200 },
+    { "score": 5160, "item": "初級日月精華", "qty": 1 },
+    { "score": 6000, "item": "晶靈石", "qty": 300 },
+    { "score": 6210, "item": "初級日月精華", "qty": 1 },
+    { "score": 6840, "item": "[特殊]榮譽證書", "qty": 1 },
+    { "score": 8280, "item": "晶靈石", "qty": 400 },
+    { "score": 9240, "item": "[特殊]榮譽證書", "qty": 1 },
+    { "score": 10140, "item": "[特殊]榮譽證書", "qty": 1 },
+    { "score": 11340, "item": "[特殊]榮譽證書", "qty": 1 },
+    { "score": 12300, "item": "[特殊]榮譽證書", "qty": 1 },
+    { "score": 13020, "item": "上級日月精華", "qty": 2 },
+    { "score": 13740, "item": "晶靈石", "qty": 800 },
+    { "score": 15240, "item": "晶花原石", "qty": 1 }
+  ]
+}
